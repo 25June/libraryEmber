@@ -1,8 +1,14 @@
-<h1>{{@title}}</h1>
-<ul>
-  {{#each @uiThing as |item|}}
-    <button {{action "showUI" item}}>{{item}}</button>
-  {{/each}}
-</ul>
-
-{{yield}}
+<h1>List of favorite song</h1>
+<div class="content">
+  {{!-- <ListFilter
+    @filter={{action "filterByAuthor"}} as |filteredResult|
+  >
+    
+  </ListFilter> --}}
+  <ul class="results">
+    {{#each this.listSong as |song|}}
+      <li><MusicListing @song={{song}} /></li>
+    {{/each}}
+  </ul>
+</div>
+{{yeild}}

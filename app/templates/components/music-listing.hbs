@@ -1,0 +1,14 @@
+<article class="listing">
+  <a class="image {{if this.isWide "wide"}}" onclick={{action "toggleImageSize"}} role="button">
+    <img src={{this.song.image}} class=" {{if this.isWide "" "img-display"}}" alt={{this.song.name}}>
+  </a>
+  <div class="details">
+    <h3>{{this.song.name}}</h3>
+    <div class="detail owner">
+      <span>Author:</span> {{music-property-type this.song.author}} - {{this.song.author}}
+    </div>
+    <div class="detail type">
+      <span>Youtube:</span>{{this.song.youtube}}
+    </div>
+  </div>
+</article>
